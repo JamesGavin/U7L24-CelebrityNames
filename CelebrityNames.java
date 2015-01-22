@@ -1,4 +1,5 @@
-import java.io.*;
+
+    import java.io.*;
 import java.util.*;
 
 /**
@@ -9,7 +10,7 @@ import java.util.*;
  */
 public class CelebrityNames
 {
-    public static final String FILE_NAME = "CelebrityData.txt";
+    public static final String FILE_NAME = "/Users/JamesBurns/Desktop/JB NumData/names";
     public static void main(String args[]) throws IOException
     { 
         Scanner sf = new Scanner(new File(FILE_NAME));
@@ -30,8 +31,11 @@ public class CelebrityNames
         { 
             Scanner sc = new Scanner( text[j] );
             String firstName = sc.next( );
+            
+            String middleName = sc.next( );
             String lastName = sc.next( );
-            reversedName[j] = lastName + ", " + firstName;
+            String birthDay = sc.next( );
+            reversedName[j] = lastName + ", " + firstName + ", " + middleName + " -- " + birthDay;
         } 
         
         Arrays.sort(reversedName);
@@ -41,3 +45,4 @@ public class CelebrityNames
         } 
     }
 }
+
